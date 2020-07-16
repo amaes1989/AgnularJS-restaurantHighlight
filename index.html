@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="restaurantApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Highlight Selected</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.angularjs.org/1.8.0/angular.min.js"></script>
+    <script src="js/controllers.js"></script>
+</head>
+
+<body>
+    <h1>Restaurant</h1>
+    <div>
+        <table ng-controller="RestaurantTableController">
+            <tr>
+                <th>Name</th>
+                <th>Cuisine</th>
+                <th>City</th>
+            </tr>
+            <tr ng-repeat="restaurant in directory" ng-click="selectRestaurant($index)" ng-class="{selected: $index==selectedRow}">
+                <td>{{restaurant.name}}</td>
+                <td>{{restaurant.cuisine}}</td>
+                <td>{{restaurant.city}}</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
