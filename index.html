@@ -21,8 +21,9 @@
             </tr>
             <tr ng-repeat="restaurant in directory" ng-click="selectRestaurant($index)" ng-class="{selected: $index==selectedRow}">
                 <td>{{restaurant.name}}</td>
-                <td>{{restaurant.cuisine}}</td>
                 <td>{{restaurant.city}}</td>
+                <td>{{restaurant.cuisine}}</td>
+                <td><img ng-src="img/{{restaurant.image}}.jpg" alt="{{restaurant.image}}" height="100" width="auto"></td>
             </tr>
         </table>
     </div>
